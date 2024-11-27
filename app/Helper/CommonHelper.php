@@ -3,13 +3,14 @@
 namespace App\Helper;
 
 use Illuminate\Http\UploadedFile;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rules\File;
+use Illuminate\Support\Facades\Storage;
 
 class CommonHelper
 {
     public static function uploadFile(UploadedFile $file, $path, $oldFile = ''): string
     {
+        // dd($file);
         if (!empty($file)) {
             // Remove Old file
             if (!empty($oldFile)) {

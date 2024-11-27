@@ -30,8 +30,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/movie', [MovieController::class, 'index'])->name('movie.index');
     Route::post('/movie', [MovieController::class, 'store'])->name('movie.store');
     Route::get('/{movie}/edit', [MovieController::class, 'edit'])->name('movie.edit');
-    Route::put('/{id}/update', [MovieController::class, 'update'])->name('movie.update');
-    Route::delete('{id}/delete', [MovieController::class, 'destroy'])->name('movie.delete');
+    Route::post('/{movie}/update', [MovieController::class, 'update'])->name('movie.update');
+    Route::delete('{movie}/delete', [MovieController::class, 'destroy'])->name('movie.delete');
    
 });
 
